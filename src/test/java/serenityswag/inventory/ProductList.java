@@ -5,6 +5,10 @@ import java.util.List;
 
 public class ProductList extends PageObject {
 
+    public static By addToCartButtonFor(String itemName) {
+        return By.xpath("//div[@class='inventory_item'][contains(.,'" + itemName + "')]//button");
+    }
+
     public List<String> getTitles() {
         // find all web elementS by classname, get text content
         return findAll(By.className("inventory_item_name")).textContents();
