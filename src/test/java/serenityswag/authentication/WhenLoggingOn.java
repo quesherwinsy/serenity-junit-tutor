@@ -34,6 +34,8 @@ class WhenLoggingOn extends UIInteractionSteps {
     void usersCanLogOnViaHomePage(){
         //step to call the login
         login.as(STANDARD_USER);
+        // serenity generates report about user credential used
+        Serenity.recordReportData().withTitle("User credentials").andContents("User: " + STANDARD_USER);
         // serenity generates report about assert
         Serenity.reportThat("Inventory page displays correct title",
                 ()-> assertThat(inventoryPage.getHeading()).isEqualToIgnoringCase("Products")

@@ -1,5 +1,6 @@
 package seleniumeasy.pageobjects;
 import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.WebElementState;
 import net.thucydides.core.annotations.WhenPageOpens;
 import org.openqa.selenium.By;
 
