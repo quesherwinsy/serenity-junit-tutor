@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DisplayName("When adding two numbers and get the sum")
 @Concurrent
 public class CalculationsTestReadCSV {
-    @Managed(driver= "chrome", uniqueSession = true)
+    @Managed(uniqueSession = true)
     WebDriver driver;
 
     TwoInputFieldForm twoInputFieldForm;
